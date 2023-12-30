@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://ascentproxy.xyz/AscentProxy.ico" type="image/png">
+    <title>Ascent Proxy</title>
+    <style>
+        @keyframes rainbow {
+            16.66%   { color: violet; }
+            16.66%   { color: indigo; }
+            33.33%   { color: blue; }
+            100%     { color: red; }
+        }
+
+        body {
+    background-color: #0D1517;
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Fixed height of the body equal to the viewport height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .side-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        background-color: #203035;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align: left;
+    }
+
+    .side-menu button {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        font-size: 30px;
+        margin-left: 50px;
+        background-color: transparent;
+        box-shadow: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .side-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .side-menu li {
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+        border-bottom: 1px solid #555;
+    }
+
+    .side-menu a {
+        text-decoration: none;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+        color: #f1f1f1;
+    }
+
+        header {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly adjust box-shadow */
+    background-color: #101a1d;
+    padding: none; /* Add padding for better spacing */
+}
+
+header img {
+    max-height: 30px;
+    width: auto;
+}
+        
+.vertical-center {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: none; /* Adjust margin as needed */
+}
+
+.tutorial-button,
+.pricing-button,
+.login-button {
+    background-color: transparent;
+    color: #fff;
+    box-shadow: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none; );
+    width: 150px;
+    opacity: 0.8;
+    border-radius: 6px;
+    position: relative;
+}
+
+.tutorial-button img,
+.pricing-button img,
+.login-button img {
+    max-height: 20px;
+    width: auto;
+}
+
+.tutorial-button:hover,
+.pricing-button:hover,
+.login-button:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+        .cookie-snackbar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #172529;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    }
+        .button-text {
+            flex: 1;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Align content to the right */
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            opacity: 0.8;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        button img {
+            max-height: 20px;
+            width: auto;
+        }
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.banner-section img {
+    max-width: 100%;
+    max-height: 200px; 
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+    background-color: #2c3e50; 
+    color: #fff;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+        footer {
+            padding: 10px;
+            background-color: #0D1517;
+            text-align: center;
+            font-size: 10px;
+            flex-shrink: 0; 
+            margin-bottom: 0px;
+            margin-top: auto;
+        }
+       
+        footer p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    
+    <header>
+        <span style="font-size: 1px; flex: 1;"></span>
+        <img src="https://ascentproxy.xyz/AscentProxy.ico" alt="Ascent Logo">
+        <span style="font-size: 20px;">Ascent</span>
+        <span style="font-size: 1px; flex: 1;"></span>
+    </header>
+
+   <div id="side-menu" class="side-menu">
+        <button onclick="toggleSideMenu()" class="close-btn">×</button>
+        <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+
+<!--<div class="button-container">
+    <button class="tutorial-button" onclick="buttonClicked('Tutorial')">
+        <span class="button-text">Tutorial</span>
+        <img src="tutorial_icon.png" alt="Tutorial Icon">
+    </button>
+
+    <button class="pricing-button" onclick="buttonClicked('Pricing')">
+        <span class="button-text">Pricing</span>
+        <img src="pricing_icon.png" alt="Pricing Icon">
+    </button>
+
+    <button class="login-button" onclick="buttonClicked('Login')">
+        <span class="button-text">Login</span>
+        <img src="login_icon.png" alt="Login Icon">
+    </button>
+</div>
+-->
+
+<div class="banner-section">
+    <img src="https://ascentproxy.xyz/thumbnail.jpg" alt="Banner Image">
+    <div class="banner-text">
+        <h3>Experience Ascent Proxy</h3>
+        <p>Welcome to Ascent Proxy!</p>
+	<p>your trusted partner for enhancing your GrowTopia gaming experience.</p>
+	<p>At Ascent Proxy, we're committed to providing high-speed and secure proxy solutions designed exclusively for GrowTopia players.</p>
+	<p>Our team of gaming enthusiasts has crafted a service that ensures smooth gameplay, privacy, and reliable connections. Choose Ascent Proxy to unlock the full potential of your gaming adventures in the world of GrowTopia.</p>
+	<p>Unlock a new level of gaming with our powerful Windows and Android Proxy!</p>
+	<a href="https://youtu.be/3nyer9Hdbjs?si=74j4wpdF36YVCwAL" class="banner-button">Windows Proxy Showcase</a>
+        <a href="https://youtu.be/Dq3W5gRfS2A?si=G1xpyVXhsXxb34AI" class="banner-button">Android Proxy Showcase</a>
+    </div>
+</div>
+    <div style="flex: 1;"></div>
+<div class="clearfix">
+
+    <footer>
+        <p>Copyright 2024 @ascentproxy.xyz all right reserved.</p>
+    </footer>
+    </div>
+    </body>
+    <script> 
+        // Smooth scroll script
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    var targetId = this.getAttribute('href').substring(1);
+                    var targetElement = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    function buttonClicked(buttonName) {
+            if (buttonName === 'null') {
+                window.location.href = 'https://discord.gg/B7Mz5nucvv';
+            }
+            if (buttonName === 'Button 1') {
+                window.location.href = 'https://iflux.my.id/download/localhost.apk';
+            }
+    }
+
+    function toggleSideMenu() {
+        var sideMenu = document.getElementById("side-menu");
+        sideMenu.style.width = (sideMenu.style.width === "250px") ? "0" : "250px";
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        if (!hasAcceptedCookies()) {
+            showCookieSnackbar();
+        }
+    });
+    
+    document.addEventListener("DOMContentLoaded", function () {
+            var greetingElement = document.getElementById("greeting");
+
+            // Get the current local time
+            var currentTime = new Date().getHours();
+
+            // Set the greeting based on the current time
+            var greeting;
+            if (currentTime >= 6 && currentTime < 12) {
+                greeting = "Good Morning";
+            } else if (currentTime >= 12 && currentTime < 18) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+
+            // You can replace "User" with the user's actual name if available
+            greetingElement.textContent = greeting + ", User!";
+        });
+    </script>
+</html>
